@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Lagu</title>
+</head>
+<body>
+    <h1>Edit Lagu</h1>
+    <form method="POST">
+        <label>Judul:</label>
+        <input type="text" name="judul" value="{{ lagu[1] }}" required><br>
+        <label>Penyanyi:</label>
+        <input type="text" name="penyanyi" value="{{ lagu[2] }}" required><br>
+        <label>Genre:</label>
+        <input type="text" name="genre" value="{{ lagu[3] }}" required><br>
+        <label>Tahun Rilis:</label>
+        <input type="number" name="tahun_rilis" value="{{ lagu[4] }}" required><br>
+        <button type="submit">Simpan</button>
+    </form>
+</body>
+</html>

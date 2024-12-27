@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Lagu</title>
+</head>
+<body>
+    <h1>Daftar Lagu</h1>
+    <a href="/tambah">Tambah Lagu</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Judul</th>
+                <th>Penyanyi</th>
+                <th>Genre</th>
+                <th>Tahun Rilis</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for lagu_item in lagu %}
+            <tr>
+                <td>{{ lagu_item.judul }}</td>
+                <td>{{ lagu_item.penyanyi }}</td>
+                <td>{{ lagu_item.genre }}</td>
+                <td>{{ lagu_item.tahun_rilis }}</td>
+                <td>
+                    <a href="/edit/{{ lagu_item.id }}">Edit</a>
+                    <a href="/hapus/{{ lagu_item.id }}">Hapus</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
